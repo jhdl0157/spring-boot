@@ -6,16 +6,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Repository
-public interface QuestionRepository extends JpaRepository<Question, Integer> {
-    Question findBySubject(String Subject);
+public interface AnswerRepository extends JpaRepository<Answer,Long> {
+
 
     @Transactional
     @Modifying
     @Query(
-            value = "truncate question",
+            value = "truncate answer",
             nativeQuery = true
     )
     void truncateMyTable();
@@ -35,8 +33,4 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
             nativeQuery = true
     )
     void enableForeignKeyCheck();
-
-    Question findBySubjectAndContent(String Subject,String Content);
-
-    List<Question> findBySubjectLike(String s);
 }
