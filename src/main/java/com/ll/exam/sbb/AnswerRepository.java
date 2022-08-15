@@ -18,4 +18,7 @@ public interface AnswerRepository extends JpaRepository<Answer, Integer>, Reposi
 
 
     Answer findByContentAndAndCreateDate(String content, LocalDateTime localDateTime);
+
+
+
 }
