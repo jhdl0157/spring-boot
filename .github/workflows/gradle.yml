@@ -18,8 +18,7 @@ jobs:
       with:
        java-version: '17'
        distribution: 'zulu' # See 'Supported distributions' for available options
-       cache: 'gradle'
-    - run: ./gradlew build --no-daemon
+
         
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
