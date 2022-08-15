@@ -33,7 +33,8 @@ jobs:
       run: chmod +x gradlew
       
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew clean build
+      
     - name: Cleanup Gradle Cache
       if: ${{ always() }}
       run: |
