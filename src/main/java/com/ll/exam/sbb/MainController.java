@@ -77,13 +77,6 @@ public class MainController {
         return (Integer) session.getAttribute("age");
     }
 
-
-    @GetMapping("/person")
-    @ResponseBody// 이런식으로 되도록 구현해보세요.
-    public Person addPerson(Person p) {
-        return p;
-    }
-
 }
 
 
